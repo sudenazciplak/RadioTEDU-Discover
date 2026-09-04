@@ -1,5 +1,8 @@
 # RadioTEDU Discover 🎧
 
+## 🌐 Canlı Demo
+[Projeyi canlı olarak dene](https://sudenazciplak.github.io/RadioTEDU-Discover/)
+
 RadioTEDU içerikleri arasında kullanıcıların ilgi alanlarına ve dinleme amaçlarına göre kişiselleştirilmiş podcast önerileri sunan bir web prototipidir.
 
 ## 🎯 Projenin Amacı
