@@ -1,0 +1,653 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6f8;
+    color: #17243d;
+}
+
+
+/* ==================================================
+   ANA KAPSAYICI
+================================================== */
+
+.welcome {
+    width: 100%;
+    max-width: 850px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 55px 30px 70px;
+    text-align: center;
+}
+
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.logo {
+    display: inline-block;
+    margin-bottom: 55px;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    color: #17243d;
+}
+
+.logo::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 3px;
+    margin: 8px auto 0;
+    background: #e31e2f;
+    border-radius: 10px;
+}
+
+
+/* ==================================================
+   GENEL
+================================================== */
+
+.icon {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 28px;
+
+    background: #17243d;
+    border-radius: 50%;
+
+    font-size: 42px;
+
+    box-shadow: 0 15px 35px rgba(23, 36, 61, 0.18);
+}
+
+h1 {
+    margin: 0 0 16px;
+
+    font-size: 43px;
+    line-height: 1.15;
+    letter-spacing: -1.4px;
+
+    color: #17243d;
+}
+
+h2 {
+    color: #17243d;
+}
+
+h3 {
+    margin-top: 25px;
+    font-size: 15px;
+    color: #17243d;
+}
+
+p {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #6b7280;
+}
+
+
+/* ==================================================
+   GENEL BUTON
+================================================== */
+
+button {
+    border: none;
+    outline: none;
+
+    margin-top: 28px;
+    padding: 14px 34px;
+
+    border-radius: 30px;
+
+    background: #e31e2f;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover {
+    background: #c91828;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(227, 30, 47, 0.20);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* ==================================================
+   GERİ BUTONU
+================================================== */
+
+.back-button {
+    display: block;
+
+    margin: 0 0 35px;
+    padding: 7px 0;
+
+    background: transparent;
+    color: #17243d;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    box-shadow: none;
+}
+
+.back-button:hover {
+    background: transparent;
+    color: #e31e2f;
+
+    box-shadow: none;
+
+    transform: none;
+}
+
+
+/* ==================================================
+   İLERLEME
+================================================== */
+
+.progress {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 9px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #8a8f98;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+
+    background: #e5e7eb;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+
+    background: #e31e2f;
+
+    border-radius: 10px;
+
+    transition: width 0.3s ease;
+}
+
+
+/* ==================================================
+   SORU SEÇENEKLERİ
+================================================== */
+
+.options {
+    width: 100%;
+    max-width: 650px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+
+    margin: 35px auto 0;
+}
+
+.options button {
+    width: 100%;
+
+    margin: 0;
+    padding: 18px 20px;
+
+    background: white;
+    color: #17243d;
+
+    border: 1px solid #e3e5e9;
+    border-radius: 16px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    box-shadow: 0 5px 18px rgba(23, 36, 61, 0.05);
+}
+
+.options button:hover {
+    background: white;
+    color: #e31e2f;
+
+    border-color: #e31e2f;
+
+    box-shadow: 0 8px 25px rgba(23, 36, 61, 0.08);
+}
+
+.options button.selected {
+    background: white;
+    color: #e31e2f;
+
+    border: 2px solid #e31e2f;
+
+    box-shadow: 0 0 0 4px rgba(227, 30, 47, 0.09);
+
+    transform: translateY(-2px);
+}
+
+.options button.selected::after {
+    content: " ✓";
+
+    font-weight: 800;
+}
+
+
+/* ==================================================
+   SONUÇLAR
+================================================== */
+
+.results {
+    width: 100%;
+    max-width: 720px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin: 35px auto 0;
+}
+
+.result-card {
+    width: 100%;
+
+    padding: 27px;
+
+    text-align: left;
+
+    background: white;
+
+    border: 1px solid #e7e8eb;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(23, 36, 61, 0.07);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 15px 35px rgba(23, 36, 61, 0.10);
+}
+
+.result-card h2 {
+    margin: 0 0 10px;
+
+    font-size: 21px;
+    line-height: 1.35;
+}
+
+.result-card p {
+    margin: 8px 0;
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.result-card .author {
+    margin-top: -3px;
+
+    color: #8a8f98;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.recommendation-label {
+    display: inline-block;
+
+    margin-bottom: 16px;
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    background: #17243d;
+    color: white;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.score {
+    display: inline-block;
+
+    margin: 12px 0;
+    padding: 6px 11px;
+
+    border-radius: 15px;
+
+    background: #f1f2f4;
+    color: #17243d;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.result-card ul {
+    margin: 10px 0 0;
+    padding-left: 20px;
+
+    color: #656b75;
+}
+
+.result-card li {
+    margin-bottom: 7px;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.result-card button {
+    margin-top: 17px;
+    padding: 11px 20px;
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   ARAMA
+================================================== */
+
+.search-section {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 55px auto 0;
+    padding-top: 35px;
+
+    border-top: 1px solid #dedfe3;
+}
+
+.search-title {
+    margin-bottom: 8px;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    color: #17243d;
+}
+
+.search-description {
+    margin-bottom: 20px !important;
+
+    font-size: 14px !important;
+
+    color: #7b8088 !important;
+}
+
+.search-box {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 20px;
+
+    border: 1px solid #dcdfe4;
+    border-radius: 28px;
+
+    background: white;
+    color: #17243d;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.search-box input::placeholder {
+    color: #9da1a8;
+}
+
+.search-box input:focus {
+    border-color: #e31e2f;
+
+    box-shadow: 0 0 0 4px rgba(227, 30, 47, 0.08);
+}
+
+.search-box button {
+    flex-shrink: 0;
+
+    height: 52px;
+
+    margin: 0;
+    padding: 0 27px;
+
+    border-radius: 28px;
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   MOBİL
+================================================== */
+
+@media (max-width: 700px) {
+
+    .welcome {
+        max-width: 100%;
+
+        padding: 30px 20px 55px;
+    }
+
+
+    /* ---------- Logo ---------- */
+
+    .logo {
+        margin-bottom: 40px;
+
+        font-size: 20px;
+    }
+
+
+    /* ---------- Ana sayfa ---------- */
+
+    .welcome:not(:has(.progress)):not(:has(#results)) {
+        padding-top: 30px;
+    }
+
+    .welcome:not(:has(.progress)):not(:has(#results)) .logo {
+        margin-bottom: 38px;
+    }
+
+    .welcome:not(:has(.progress)):not(:has(#results)) .icon {
+        width: 72px;
+        height: 72px;
+
+        margin-bottom: 25px;
+
+        font-size: 32px;
+    }
+
+    .welcome:not(:has(.progress)):not(:has(#results)) h1 {
+        font-size: 34px;
+        line-height: 1.18;
+
+        margin-bottom: 15px;
+    }
+
+    .welcome:not(:has(.progress)):not(:has(#results)) > p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .welcome:not(:has(.progress)):not(:has(#results)) > button {
+        margin-top: 25px;
+
+        padding: 13px 32px;
+
+        font-size: 15px;
+    }
+
+
+    /* ---------- Soru başlıkları ---------- */
+
+    h1 {
+        font-size: 31px;
+
+        letter-spacing: -0.8px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+
+    /* ---------- İlerleme ---------- */
+
+    .progress {
+        margin-bottom: 32px;
+    }
+
+
+    /* ---------- Seçenekler ---------- */
+
+    .options {
+        grid-template-columns: 1fr;
+
+        gap: 11px;
+
+        margin-top: 28px;
+    }
+
+    .options button {
+        padding: 17px 16px;
+
+        font-size: 15px;
+    }
+
+
+    /* ---------- Sonuçlar ---------- */
+
+    .result-card {
+        padding: 22px;
+    }
+
+    .result-card h2 {
+        font-size: 19px;
+    }
+
+
+    /* ---------- Arama ---------- */
+
+    .search-section {
+        margin-top: 45px;
+
+        padding-top: 30px;
+    }
+
+    .search-title {
+        font-size: 18px;
+    }
+
+    .search-description {
+        font-size: 13px !important;
+
+        line-height: 1.5;
+    }
+
+    .search-box {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .search-box input {
+        width: 100%;
+
+        height: 48px;
+
+        font-size: 14px;
+    }
+
+    .search-box button {
+        width: 100%;
+
+        height: 48px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* ==================================================
+   ÇOK KÜÇÜK TELEFONLAR
+================================================== */
+
+@media (max-width: 400px) {
+
+    .welcome {
+        padding: 28px 16px 45px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .result-card {
+        padding: 19px;
+    }
+}
